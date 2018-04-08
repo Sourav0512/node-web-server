@@ -17,6 +17,8 @@
   },
   "homepage": "https://github.com/Sourav0512/node-web-server#readme",
   "dependencies": {
-    "express": "^4.16.3"
+    "express": "^4.16.3",
+    "hbs": "^4.0.1",
+    "npm": "^5.8.0"
   }
 }
