@@ -4,6 +4,7 @@ const hbs = require('hbs');
 const fs = require('fs');
 const yargs = require('yargs');
 var app = express();
+const port = process.env.PORT || 3000;
 
 var argv = yargs
           .command('sustain','site goes to workshop')
@@ -48,4 +49,4 @@ if (argv.sustain === 'true') {
 app.use(express.static(__dirname + '/public')); // dir to load static content from
 app.get('/about',(request,response) =>{response.render('about.hbs',{Title : 'About Title' ,Para : 'About Page'})});
 app.get('/',(request,response) =>{response.render('home.hbs',{Title : 'Home Page', Para : 'some random body here'})});
-app.listen(4000);
+app.listen(port,()=>{console.log(`connecting at ${port}`)});
